@@ -2,6 +2,8 @@
 
 简单易用的json内容展示组件，支持vue@2和3，支持SSR，组件支持增量渲染即使大文件json也可以快速渲染。
 
+原作者： chenfengjw163
+
 [![Travis](https://img.shields.io/travis/chenfengjw163/vue-json-viewer/master.svg?style=flat-square)](https://travis-ci.org/chenfengjw163/vue-json-viewer)
 [![npm](https://img.shields.io/npm/v/vue-json-viewer.svg?style=flat-square)](https://www.npmjs.com/package/vue-json-viewer)
 ![npm](https://img.shields.io/npm/dw/vue-json-viewer.svg?style=flat-square)

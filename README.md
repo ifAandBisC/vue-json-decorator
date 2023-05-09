@@ -4,6 +4,8 @@
 
 Simple JSON viewer component, for Vue.js 2 or 3.
 
+Origin author: chenfengjw163
+
 Support for incremental update components
 
 [![Travis](https://img.shields.io/travis/chenfengjw163/vue-json-viewer/master.svg?style=flat-square)](https://travis-ci.org/chenfengjw163/vue-json-viewer)

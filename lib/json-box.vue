@@ -33,6 +33,10 @@ export default {
       type: String,
       default: '$',
     },
+    decorator: {
+      type: Function,
+      default: null
+    }
   },
   data() {
     return {
@@ -149,6 +153,7 @@ export default {
         showArrayIndex: this.showArrayIndex,
         showDoubleQuotes: this.showDoubleQuotes,
         path: this.path,
+        decorator: this.decorator
       },
       on: {
         'update:expand': value => {

@@ -3,7 +3,11 @@ export default {
   name: 'JsonBoolean',
   functional: true,
   props: {
-    jsonValue: Boolean
+    jsonValue: Boolean,
+    decorator: {
+      type: Function,
+      default: null
+    },
   },
   render (h, { props }) {
     return h('span', {
@@ -12,7 +16,7 @@ export default {
         'jv-boolean': true,
       },
       domProps: {
-        innerText: props.jsonValue.toString()
+        innerText: this.decorator && typeof this.decorator === 'function' ? this.decorator(props.jsonValue.toString()) : props.jsonValue.toString()
       }
     })
   }

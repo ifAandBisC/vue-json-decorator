@@ -1,10 +1,10 @@
 {
-  "name": "vue-json-viewer",
+  "name": "vue-json-decorator",
   "version": "2.2.22",
   "description": "vuejs展示json的组件",
-  "main": "vue-json-viewer.js",
+  "main": "vue-json-decorator.js",
   "files": [
-    "vue-json-viewer.js",
+    "vue-json-decorator.js",
     "ssr.js",
     "style.css"
   ],
@@ -20,20 +20,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chenfengjw163/vue-json-viewer.git"
+    "url": "git+https://github.com/flyswifjxsu/vue-json-decorator.git"
   },
   "keywords": [
     "vue",
     "json"
   ],
-  "homepage": "https://github.com/chenfengjw163/vue-json-viewer#readme",
+  "homepage": "https://github.com/flyswifjxsu/vue-json-decorator#readme",
   "author": {
     "name": "陈峰",
     "email": "chenfengjw@hotmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chenfengjw163/vue-json-viewer/issues"
+    "url": "https://github.com/flyswifjxsu/vue-json-decorator/issues"
   },
   "contributors": [
     {
@@ -43,6 +43,10 @@
     {
       "name": "Sacha Stafyniak",
       "email": "sacha.stafyniak@gmail.com"
+    },
+    {
+      "name": "flyswift",
+      "email": "ifaandbisc@gmail.com"
     }
   ],
   "dependencies": {
