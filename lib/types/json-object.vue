@@ -23,6 +23,10 @@ export default {
     showArrayIndex: Boolean,
     showDoubleQuotes: Boolean,
     path: String,
+    decorator: {
+      type: Function,
+      default: null
+    },
   },
   data() {
     return {
@@ -122,7 +126,8 @@ export default {
               forceExpand: this.forceExpand,
               showArrayIndex: this.showArrayIndex,
               showDoubleQuotes: this.showDoubleQuotes,
-              path: `${this.path}.${key}`
+              path: `${this.path}.${key}`,
+              decorator: this.decorator
             }
           }))
         }
