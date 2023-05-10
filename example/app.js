@@ -32,7 +32,7 @@ new Vue({
               }
             }
           }}></json-viewer>
-        <json-viewer value={this.jsonData} decorator={this.decorator}></json-viewer>
+        <json-viewer value={this.jsonData}></json-viewer>
         <hr />
         <json-viewer
           value={this.jsonData}
@@ -48,7 +48,6 @@ new Vue({
           timeformat={time => new Date(time)}
           sort
           onKeyclick={onKeyclick}
-          decorator={this.decorator}
           ></json-viewer>
         <hr />
         <json-viewer
@@ -59,8 +58,7 @@ new Vue({
             align: 'left'
           }}
           scopedSlots={scopedSlots}
-          onCopied={onCopied}
-          decorator={this.decorator}></json-viewer>
+          onCopied={onCopied}></json-viewer>
       </div>
     )
   },
@@ -129,32 +127,6 @@ new Vue({
           }
         ]
       }
-    }
-  },
-  methods: {
-    decorator(text) {
-      let result = text
-      const segmenter = new Intl.Segmenter('en', { granularity: 'word' })
-      if (segmenter) {
-        result = ''
-        Array.from(segmenter.segment(text))
-          .forEach(segment => {
-            const text = segment.segment.replace(/[<>&"]/g, c => {
-              return {
-                '<': '&lt;',
-                '>': '&gt;',
-                '&': '&amp;',
-                '"': '&quot;'
-              }[c]
-            })
-            if (segment.isWordLike) {
-              result += `<span class="linked">${text}</span>`
-            } else {
-              result += text
-            }
-          })
-      }
-      return result
     }
   }
 })
