@@ -4,3 +4,8 @@
 .jv-key-node {
   display: flex;
 }
+.linked:hover {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
