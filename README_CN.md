@@ -158,6 +158,7 @@ import 'vue-json-viewer/style.css'
 | `preview-mode` | 不可折叠模式，默认全部展开 | `false` |
 | `show-array-index` | 是否显示数组索引 | `true` |
 | `show-double-quotes` | 展示key双引号 | `false` |
+| `decorator` | 装饰渲染的value值 | `null` |
 
 
 ## 事件

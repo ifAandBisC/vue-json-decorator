@@ -164,6 +164,7 @@ import 'vue-json-viewer/style.css'
 | `preview-mode` | no expand mode | `false` |
 | `show-array-index` | array show index | `true` |
 | `show-double-quotes` | show double quotes | `false` |
+| `decorator` | decorate the value string | `null` |
 
 
 ## Listeners
