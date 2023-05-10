@@ -1,6 +1,6 @@
 # vue-json-viewer
 
-[中文版](https://github.com/flyswifxjsu/vue-json-decorator/blob/master/README_CN.md)
+[中文版](https://github.com/ifAandBisC/vue-json-decorator/blob/master/README_CN.md)
 
 Simple JSON viewer component, for Vue.js 2 or 3.
 
