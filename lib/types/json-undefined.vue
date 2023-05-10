@@ -1,6 +1,4 @@
 <script>
-import { decorateText } from '../utils'
-
 export default {
   name: 'JsonUndefined',
   functional: true,
@@ -8,21 +6,16 @@ export default {
     jsonValue: {
       type: Object,
       default: null
-    },
-    decorator: {
-      type: Function,
-      default: null
-    },
+    }
   },
   render (h, { props }) {
-    const text = props.jsonValue === null ? 'null' : 'undefined'
     return h('span', {
       class: {
         'jv-item': true,
         'jv-undefined': true,
       },
       domProps: {
-        innerHTML: decorateText(props.decorator, text)
+        innerText: props.jsonValue === null ? 'null' : 'undefined'
       }
     })
   }

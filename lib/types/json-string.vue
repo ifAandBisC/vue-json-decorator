@@ -1,6 +1,4 @@
 <script>
-import { decorateText } from '../utils'
-
 const REG_LINK = /^\w+:\/\//;
 
 export default {
@@ -9,11 +7,7 @@ export default {
     jsonValue: {
       type: String,
       required: true
-    },
-    decorator: {
-      type: Function,
-      default: null
-    },
+    }
   },
   data() {
     return {
@@ -57,13 +51,13 @@ export default {
         ref: 'itemRef',
       }
       if (islink) {
-        value = `<a href="${value}" target="_blank" class="jv-link">${decorateText(this.decorator, value.toString())}</a>`;
+        value = `<a href="${value}" target="_blank" class="jv-link">${value}</a>`;
         domItem.domProps = {
           innerHTML: `"${value.toString()}"`
         }
       } else {
         domItem.domProps = {
-          innerText: `"${decorateText(this.decorator, value.toString())}"`
+          innerText: `"${value.toString()}"`
         }
       }
     }

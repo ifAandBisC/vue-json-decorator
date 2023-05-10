@@ -1,6 +1,4 @@
 <script>
-import { decorateText } from '../utils'
-
 export default {
   name: 'JsonDate',
   inject: ['timeformat'],
@@ -9,11 +7,7 @@ export default {
     jsonValue: {
       type: Date,
       required: true
-    },
-    decorator: {
-      type: Function,
-      default: null
-    },
+    }
   },
   render (h, { props, injections }) {
     const value = props.jsonValue;
@@ -25,7 +19,7 @@ export default {
         'jv-string': true,
       },
       domProps: {
-        innerText: `"${props.decorator, decorateText(timeformat(value))}"`
+        innerText: `"${timeformat(value)}"`
       }
     })
   }
