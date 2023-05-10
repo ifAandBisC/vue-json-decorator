@@ -1,4 +1,6 @@
 <script>
+import { decorateText } from '../utils'
+
 export default {
   name: 'JsonNumber',
   functional: true,
@@ -6,7 +8,11 @@ export default {
     jsonValue: {
       type: Number,
       required: true
-    }
+    },
+    decorator: {
+      type: Function,
+      default: null
+    },
   },
   render (h, { props }) {
     const isInteger = Number.isInteger(props.jsonValue)
@@ -19,7 +25,7 @@ export default {
         'jv-number-float': !isInteger,
       },
       domProps: {
-        innerText: props.jsonValue.toString()
+        innerText: decorateText(props.decorator, props.jsonValue.toString())
       }
     })
   }

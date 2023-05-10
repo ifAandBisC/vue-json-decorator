@@ -1,4 +1,5 @@
 <script>
+import { decorateText } from '../utils'
 export default {
   name: 'JsonBoolean',
   functional: true,
@@ -16,7 +17,7 @@ export default {
         'jv-boolean': true,
       },
       domProps: {
-        innerText: this.decorator && typeof this.decorator === 'function' ? this.decorator(props.jsonValue.toString()) : props.jsonValue.toString()
+        innerText: decorateText(props.decorator, props.jsonValue.toString())
       }
     })
   }
