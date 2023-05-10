@@ -17,6 +17,13 @@ export default {
   render (h, { props }) {
     const isInteger = Number.isInteger(props.jsonValue)
 
+    const domProps = {}
+    if (props.decorator) {
+      domProps.innerHTML = decorateText(props.decorator, props.jsonValue.toString())
+    } else {
+      domProps.innerText = props.jsonValue.toString()
+    }
+
     return h('span', {
       class: {
         'jv-item': true,
@@ -24,9 +31,7 @@ export default {
         'jv-number-integer': isInteger,
         'jv-number-float': !isInteger,
       },
-      domProps: {
-        innerText: decorateText(props.decorator, props.jsonValue.toString())
-      }
+      domProps
     })
   }
 }

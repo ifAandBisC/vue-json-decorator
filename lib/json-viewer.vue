@@ -31,6 +31,7 @@
         :preview-mode="previewMode"
         :show-array-index="showArrayIndex"
         :show-double-quotes="showDoubleQuotes"
+        :decorator="decorator"
         @keyclick="onKeyclick"
       />
     </div>
@@ -102,7 +103,11 @@ export default {
     showDoubleQuotes: {
       type: Boolean,
       default: false,
-    }
+    },
+    decorator: {
+      type: Function,
+      default: null
+    },
   },
   provide () {
     return {

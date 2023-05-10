@@ -11,14 +11,18 @@ export default {
     },
   },
   render (h, { props }) {
+    const domProps = {}
+    if (props.decorator) {
+      domProps.innerHTML = decorateText(props.decorator, props.jsonValue.toString())
+    } else {
+      domProps.innerText = props.jsonValue.toString()
+    }
     return h('span', {
       class: {
         'jv-item': true,
         'jv-boolean': true,
       },
-      domProps: {
-        innerText: decorateText(props.decorator, props.jsonValue.toString())
-      }
+      domProps
     })
   }
 }

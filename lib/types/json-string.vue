@@ -57,13 +57,16 @@ export default {
         ref: 'itemRef',
       }
       if (islink) {
-        value = `<a href="${value}" target="_blank" class="jv-link">${decorateText(this.decorator, value.toString())}</a>`;
+        value = `<a href="${value}" target="_blank" class="jv-link">${value.toString()}</a>`;
         domItem.domProps = {
           innerHTML: `"${value.toString()}"`
         }
       } else {
-        domItem.domProps = {
-          innerText: `"${decorateText(this.decorator, value.toString())}"`
+        domItem.domProps  = {}
+        if (this.decorator) {
+          domItem.domProps.innerHTML = `"${decorateText(this.decorator, value.toString())}"`
+        } else {
+          domItem.domProps.innerText = `"${value.toString()}"`
         }
       }
     }

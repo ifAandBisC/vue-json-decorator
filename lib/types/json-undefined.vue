@@ -16,14 +16,18 @@ export default {
   },
   render (h, { props }) {
     const text = props.jsonValue === null ? 'null' : 'undefined'
+    const domProps = {}
+    if (props.decorator) {
+      domProps.innerHTML = decorateText(props.decorator, text)
+    } else {
+      domProps.innerText = text
+    }
     return h('span', {
       class: {
         'jv-item': true,
         'jv-undefined': true,
       },
-      domProps: {
-        innerHTML: decorateText(props.decorator, text)
-      }
+      domProps
     })
   }
 }
