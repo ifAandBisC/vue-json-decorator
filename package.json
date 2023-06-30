@@ -1,10 +1,10 @@
 {
-  "name": "vue-json-decorator",
-  "version": "2.3.2",
+  "name": "vue-json-formatter",
+  "version": "2.3.3",
   "description": "vuejs展示json的组件",
-  "main": "vue-json-decorator.js",
+  "main": "vue-json-formatter.js",
   "files": [
-    "vue-json-decorator.js",
+    "vue-json-formatter.js",
     "ssr.js",
     "style.css"
   ],
@@ -69,7 +69,7 @@
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
