@@ -55,7 +55,7 @@ import Clipboard from 'clipboard'
 import {debounce} from './utils';
 
 export default {
-  name: 'JsonViewer',
+  name: 'JsonDecorator',
   components: {
     JsonBox
   },

@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import JsonViewer from '../lib'
+import JsonDecorator from '../lib'
 import './app.css'
 
-Vue.use(JsonViewer)
+Vue.use(JsonDecorator)
 
 new Vue({
   el: '#app',
@@ -21,7 +21,7 @@ new Vue({
     }
     return (
       <div>
-        <json-viewer
+        <json-decorator
           preview-mode
           value={{
             data: {
@@ -31,10 +31,10 @@ new Vue({
                 }
               }
             }
-          }}></json-viewer>
-        <json-viewer value={this.jsonData}></json-viewer>
+          }}></json-decorator>
+        <json-decorator value={this.jsonData}></json-decorator>
         <hr />
-        <json-viewer
+        <json-decorator
           value={this.jsonData}
           expand-depth={5}
           copyable={{
@@ -48,9 +48,9 @@ new Vue({
           timeformat={time => new Date(time)}
           sort
           onKeyclick={onKeyclick}
-          ></json-viewer>
+          ></json-decorator>
         <hr />
-        <json-viewer
+        <json-decorator
           value={this.jsonData}
           expand-depth={1}
           copyable={{
@@ -58,7 +58,7 @@ new Vue({
             align: 'left'
           }}
           scopedSlots={scopedSlots}
-          onCopied={onCopied}></json-viewer>
+          onCopied={onCopied}></json-decorator>
       </div>
     )
   },

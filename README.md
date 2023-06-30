@@ -1,8 +1,8 @@
-# vue-json-viewer
+# vue-json-decorator
 
 [中文版](https://github.com/ifAandBisC/vue-json-decorator/blob/master/README_CN.md)
 
-Simple JSON viewer component, for Vue.js 2 or 3.
+Simple JSON decorator component, for Vue.js 2 or 3.
 
 Origin author: chenfengjw163
 
@@ -22,43 +22,43 @@ Support for incremental update components
 ## Installing
 Using npm:
 ```
-$ npm install vue-json-viewer@2 --save
+$ npm install vue-json-decorator@2 --save
 // Vue2
-$ npm install vue-json-viewer@3 --save
+$ npm install vue-json-decorator@3 --save
 // Vue3
 ```
 
 Using yarn:
 ```
-$ yarn add vue-json-viewer@2 
+$ yarn add vue-json-decorator@2 
 // Vue2
-$ yarn add vue-json-viewer@3 
+$ yarn add vue-json-decorator@3 
 // Vue3
 ```
 
 ## Example
 
 ``` html
-<json-viewer :value="jsonData"></json-viewer>
+<json-decorator :value="jsonData"></json-decorator>
 
 <hr />
 
-<json-viewer
+<json-decorator
   :value="jsonData"
   :expand-depth=5
   copyable
   boxed
-  sort></json-viewer>
+  sort></json-decorator>
 ```
 
 ``` js
 import Vue from 'vue'
-import JsonViewer from 'vue-json-viewer'
+import JsonDecorator from 'vue-json-decorator'
 
-// Import JsonViewer as a Vue.js plugin
-Vue.use(JsonViewer)
+// Import JsonDecorator as a Vue.js plugin
+Vue.use(JsonDecorator)
 // or 
-// components: {JsonViewer}
+// components: {JsonDecorator}
 
 
 new Vue({
@@ -131,17 +131,17 @@ new Vue({
 ```
 ### SSR
 ``` js
-import JsonViewer from 'vue-json-viewer/ssr'
+import JsonDecorator from 'vue-json-decorator/ssr'
 
-// Import JsonViewer as a Vue.js plugin
-Vue.use(JsonViewer)
+// Import JsonDecorator as a Vue.js plugin
+Vue.use(JsonDecorator)
 // or 
-// components: {JsonViewer}
+// components: {JsonDecorator}
 ```
 and
 
 ``` js
-import 'vue-json-viewer/style.css'
+import 'vue-json-decorator/style.css'
 ```
 
 
@@ -188,7 +188,7 @@ import 'vue-json-viewer/style.css'
 ## Theming
 
 To create custom theme, (e.g. `my-awesome-json-theme`), in two easy steps:
-1. add `theme="my-awesome-json-theme"` to the JsonViewer component
+1. add `theme="my-awesome-json-theme"` to the JsonDecorator component
 2. copy-pasta and customize this SCSS template:
 
 ``` scss
