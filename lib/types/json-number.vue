@@ -15,7 +15,7 @@ export default {
     },
   },
   render (h, { props }) {
-    const isInteger = Number.isInteger(props.jsonValue)
+    const isInteger = Number.isInteger(props.jsonValue) || typeof props.jsonValue === 'bigint'
 
     const domProps = {}
     if (props.decorator) {

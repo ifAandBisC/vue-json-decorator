@@ -13,7 +13,7 @@ export default {
   inject: ['expandDepth', 'onKeyclick'],
   props: {
     value: {
-      type: [Object, Array, String, Number, Boolean, Function, Date],
+      type: [Object, Array, String, Number, BigInt, Boolean, Function, Date],
       default: null
     },
     keyName: {
@@ -93,7 +93,7 @@ export default {
       dataType = JsonDate
     } else if (typeof this.value === 'object') {
       dataType = JsonObject
-    } else if (typeof this.value === 'number') {
+    } else if (['bigint', 'number'].includes(typeof this.value)) {
       dataType = JsonNumber
     } else if (typeof this.value === 'string') {
       dataType = JsonString

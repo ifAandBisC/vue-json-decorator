@@ -65,6 +65,7 @@ new Vue({
   data() {
     return {
       jsonData: {
+        bigint: BigInt(9007199254740991),
         total: 25,
         limit: 10,
         skip: 0,
