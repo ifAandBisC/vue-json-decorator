@@ -147,7 +147,7 @@ nbproject/*
 .DS_Store
 .devhost
 examples/dist/
-/vue-json-viewer.js
+/vue-json-decorator.js
 /ssr.js
 /style.css
 yarn.lock

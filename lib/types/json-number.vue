@@ -6,7 +6,7 @@ export default {
   functional: true,
   props: {
     jsonValue: {
-      type: Number,
+      type: [Number, BigInt],
       required: true
     },
     decorator: {

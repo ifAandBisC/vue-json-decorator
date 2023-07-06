@@ -1,6 +1,6 @@
 {
-  "name": "vue-json-decorator_temporary",
-  "version": "2.3.9",
+  "name": "vue-json-decorator",
+  "version": "2.3.11",
   "description": "vuejs展示json的组件",
   "main": "vue-json-decorator.js",
   "files": [
