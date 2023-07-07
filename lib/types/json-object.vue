@@ -112,7 +112,7 @@ export default {
 
     if (this.expand) {
       for (let key in this.ordered) {
-        if (this.ordered.hasOwnProperty(key)) {
+        if (Object.prototype.hasOwnProperty.call(this.ordered, key)) {
           let value = this.ordered[key]
 
           elements.push(h(JsonBox, {
