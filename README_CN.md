@@ -1,4 +1,4 @@
-# vue-json-viewer
+# vue-json-decorator
 
 简单易用的json内容展示组件，支持vue@2和3，支持SSR，组件支持增量渲染即使大文件json也可以快速渲染。
 
@@ -16,43 +16,43 @@
 ## 安装
 使用 npm:
 ```
-$ npm install vue-json-viewer@2 --save
+$ npm install vue-json-decorator@2 --save
 // Vue2
-$ npm install vue-json-viewer@3 --save
+$ npm install vue-json-decorator@3 --save
 // Vue3
 ```
 
 使用 yarn:
 ```
-$ yarn add vue-json-viewer@2 
+$ yarn add vue-json-decorator@2 
 // Vue2
-$ yarn add vue-json-viewer@3 
+$ yarn add vue-json-decorator@3 
 // Vue3
 ```
 
 ## 示例
 
 ``` html
-<json-viewer :value="jsonData"></json-viewer>
+<json-decorator :value="jsonData"></json-decorator>
 
 <hr />
 
-<json-viewer
+<json-decorator
   :value="jsonData"
   :expand-depth=5
   copyable
   boxed
-  sort></json-viewer>
+  sort></json-decorator>
 ```
 
 ``` js
 import Vue from 'vue'
-import JsonViewer from 'vue-json-viewer'
+import JsonDecorator from 'vue-json-decorator'
 
-// Import JsonViewer as a Vue.js plugin
-Vue.use(JsonViewer)
+// Import JsonDecorator as a Vue.js plugin
+Vue.use(JsonDecorator)
 // or 
-// components: {JsonViewer}
+// components: {JsonDecorator}
 
 
 new Vue({
@@ -125,17 +125,17 @@ new Vue({
 ```
 ### 支持SSR
 ``` js
-import JsonViewer from 'vue-json-viewer/ssr'
+import JsonDecorator from 'vue-json-decorator/ssr'
 
-// Import JsonViewer as a Vue.js plugin
-Vue.use(JsonViewer)
+// Import JsonDecorator as a Vue.js plugin
+Vue.use(JsonDecorator)
 // or 
-// components: {JsonViewer}
+// components: {JsonDecorator}
 ```
 and
 
 ``` js
-import 'vue-json-viewer/style.css'
+import 'vue-json-decorator/style.css'
 ```
 
 
@@ -182,7 +182,7 @@ import 'vue-json-viewer/style.css'
 ## 主题
 
 有两个办法创建自定义主题, (e.g. `my-awesome-json-theme`):
-1. 添加 `theme="my-awesome-json-theme"` JsonViewer的组件属性
+1. 添加 `theme="my-awesome-json-theme"` JsonDecorator的组件属性
 2. 复制粘贴下面的模板并且根据自定义的theme名称做对应调整:
 
 ``` scss

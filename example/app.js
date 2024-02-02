@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import JsonViewer from '../lib'
+import JsonDecorator from '../lib'
 import './app.css'
 
-Vue.use(JsonViewer)
+Vue.use(JsonDecorator)
 
 new Vue({
   el: '#app',
@@ -21,7 +21,7 @@ new Vue({
     }
     return (
       <div>
-        <json-viewer
+        <json-decorator
           preview-mode
           value={{
             data: {
@@ -31,10 +31,10 @@ new Vue({
                 }
               }
             }
-          }}></json-viewer>
-        <json-viewer value={this.jsonData} expand-button></json-viewer>
+          }}></json-decorator>
+        <json-decorator value={this.jsonData} expand-button></json-decorator>
         <hr />
-        <json-viewer
+        <json-decorator
           value={this.jsonData}
           expand-depth={5}
           copyable={{
@@ -49,9 +49,9 @@ new Vue({
           sort
           expand-button
           onKeyclick={onKeyclick}
-          ></json-viewer>
+          ></json-decorator>
         <hr />
-        <json-viewer
+        <json-decorator
           value={this.jsonData}
           expand-depth={1}
           copyable={{
@@ -59,7 +59,7 @@ new Vue({
             align: 'left'
           }}
           scopedSlots={scopedSlots}
-          onCopied={onCopied}></json-viewer>
+          onCopied={onCopied}></json-decorator>
       </div>
     )
   },
@@ -91,8 +91,8 @@ new Vue({
               lat: 44.563836,
               lng: 6.495139
             },
-            description: `Augusta Ada King, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer,
-            chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer,
+            description: `Augusta Ada King, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852)\n was an English mathematician and writer,
+            \tchiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer,
             the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation,
             and published the first algorithm intended to be carried out by such a machine.
             As a result, she is sometimes regarded as the first to recognise the full potential of a "computing machine" and the first computer programmer.`,

@@ -22,9 +22,7 @@ export default {
         'jv-item': true,
         'jv-boolean': true,
       },
-      domProps: {
-        innerText: props.decorator && typeof props.decorator === 'function' ? props.decorator(props.jsonValue.toString()) : props.jsonValue.toString()
-      }
+      domProps
     })
   }
 }
