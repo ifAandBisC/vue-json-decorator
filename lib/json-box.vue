@@ -36,7 +36,8 @@ export default {
     decorator: {
       type: Function,
       default: null
-    }
+    },
+    expandButton: Boolean
   },
   data() {
     return {
@@ -165,6 +166,23 @@ export default {
         }
       }
     }))
+
+    if (this.expandButton && !this.keyName) {
+      elements.push(h('span', {
+        class: {
+          'jv-button': true,
+        },
+        on: {
+          click: (event) => {
+            if (event.altKey) {
+              this.toggleAll()
+            } else {
+              this.toggle()
+            }
+          }
+        }
+      }, this.expand ? '折叠' : '展开'))
+    }
 
     return h('div', {
       class: {

@@ -32,7 +32,7 @@ new Vue({
               }
             }
           }}></json-viewer>
-        <json-viewer value={this.jsonData}></json-viewer>
+        <json-viewer value={this.jsonData} expand-button></json-viewer>
         <hr />
         <json-viewer
           value={this.jsonData}
@@ -47,6 +47,7 @@ new Vue({
           show-array-index={false}
           timeformat={time => new Date(time)}
           sort
+          expand-button
           onKeyclick={onKeyclick}
           ></json-viewer>
         <hr />

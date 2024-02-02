@@ -32,6 +32,7 @@
         :show-array-index="showArrayIndex"
         :show-double-quotes="showDoubleQuotes"
         :decorator="decorator"
+        :expand-button="expandButton"
         @keyclick="onKeyclick"
       />
     </div>
@@ -71,6 +72,10 @@ export default {
     expandDepth: {
       type: Number,
       default: 1
+    },
+    expandButton: {
+      type: Boolean,
+      default: false
     },
     copyable: {
       type: [Boolean, Object],
@@ -377,6 +382,8 @@ export default {
     display: inline-block;
     padding: 5px;
     z-index: 5;
+    font-size: 12px;
+    text-decoration: underline;
 
     &.copied {
       opacity: 0.4;
